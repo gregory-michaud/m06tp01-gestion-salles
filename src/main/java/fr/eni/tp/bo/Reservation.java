@@ -1,5 +1,11 @@
 package fr.eni.tp.bo;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
@@ -7,17 +13,26 @@ import java.util.Objects;
 public class Reservation {
     private Long id;
 
+    @NotBlank
+    @Size(max = 250)
     private String nomEmploye;
 
+    @NotNull
+    @Future
     private LocalDate date;
 
+    @NotNull
     private LocalTime heureDebut;
 
+    @NotNull
     private LocalTime heureFin;
 
     private long duree;
 
+    @NotNull
+    @Valid
     private Salle salle;
+
 
     public Reservation() {
     }

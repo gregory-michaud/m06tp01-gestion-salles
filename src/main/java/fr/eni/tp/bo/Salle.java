@@ -1,8 +1,14 @@
 package fr.eni.tp.bo;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 public class Salle {
+
+    @NotBlank
+    @Size(max = 25)
     private String nom;
 
     private int capacite;
