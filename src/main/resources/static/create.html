@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+<nav>
+    <h3>TP des réservations</h3>
+    <ul>
+        <li><a href="/">Accueil</a><br></li>
+        <li><a href="/reservations.html">Toutes les réservations</a><br></li>
+        <li><a href="/create.html">Créer une nouvelle réservation</a></li>
+    </ul>
+</nav>
+
+<form method="post" action="reservations">
+    <h2>Nouvelle Réservations</h2>
+    <label for="nomEmploye">Nom de l'Employé</label>
+    <input type="text" id="nomEmploye" name="nomEmploye" placeholder="Nom" required>
+    <br>
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="heureDebut">Heure de début</label>
+    <input type="time" id="heureDebut" name="heureDebut" required>
+    <br>
+    <label for="heureFin">Heure de fin</label>
+    <input type="time" id="heureFin" name="heureFin">
+    <br>
+    <label for="salle">Choix de la salle</label>
+    <select id="salle" name="salle.nom" required>
+        <option value="" disabled selected>Choisissez</option>
+    </select>
+    <br>
+    <button type="submit">Sauver</button>
+</form>
+<script src="js/create.js" defer></script>
+</body>
+</html>

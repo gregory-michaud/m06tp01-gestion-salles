@@ -1,0 +1,43 @@
+/* reset des marges intérieures et extérieures */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+h1,h2{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/* enlever les puces */
+nav ul{
+    list-style-type: none;
+}
+
+/* aucune espace entre les éléments
+* centrer le contenu textuel
+*/
+nav li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* rendre cliquable tout l'espace et pas seulement le texte */
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color:gray;
+    border: 2px solid darkgray;
+}
